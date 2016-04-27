@@ -1,0 +1,20 @@
+#!/bin/sh
+
+alias ll='ls -la'
+alias +x='chmod +x'
+alias bitch,='sudo'
+
+# git
+alias such='git add . && git commit -am '
+alias so='git add . && git commit -am '
+alias very='git'
+alias wow='git status'
+
+# php
+alias compose!='composer install --prefer-dist'
+alias ungit='find . -type d -name ".git"; echo "find . -type d -name \".git\" -exec rm -rf {} \;"'
+alias php!='php -S 0.0.0.0:8080 index.php'
+
+# docker
+alias dock='eval "$(docker-machine env default)"'
+alias pma='open "http://docker:$((dock && docker start db pma && docker port pma) | tail -n1 | cut -d ":" -f 2)"'
