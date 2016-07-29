@@ -17,8 +17,7 @@ alias ungit='find . -type d -name ".git"; echo "find . -type d -name \".git\" -e
 alias php!='php -S 0.0.0.0:8080 index.php'
 
 # docker
-alias dock='eval "$(docker-machine env default)"'
-alias pma='open "http://docker:$((dock && docker start db pma && docker port pma) | tail -n1 | cut -d ":" -f 2)"'
+alias pma='open "http://127.0.0.1:$((docker start db pma && docker port pma) | tail -n1 | cut -d ":" -f 2)"'
 
 # python
 alias pep8='pep8 --max-line-length=120'
