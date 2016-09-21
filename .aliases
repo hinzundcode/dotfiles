@@ -9,7 +9,6 @@ alias such='git add . && git commit -am '
 alias so='git add . && git commit -am '
 alias very='git'
 alias wow='git status'
-alias up='git push origin HEAD'
 
 # php
 alias compose!='composer install --prefer-dist'

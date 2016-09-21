@@ -1,0 +1,9 @@
+#!/usr/bin/php
+<?php
+$msg = $argv;
+array_shift($msg);
+
+if (count($msg))
+	shell_exec('git push origin HEAD');
+else
+	shell_exec('up '.escapeshellarg($msg));

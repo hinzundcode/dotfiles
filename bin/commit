@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 $msg = $argv;
-array_shift($argv);
-$msg = implode(' ', $argv);
+array_shift($msg);
+$msg = implode(' ', $msg);
 shell_exec('git add .');
 shell_exec('git commit -am '.escapeshellarg($msg));
