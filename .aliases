@@ -21,3 +21,5 @@ alias pma='open "http://127.0.0.1:$((docker start db pma && docker port pma) | t
 # python
 alias pep8='pep8 --max-line-length=120'
 alias dt='DJANGO_SETTINGS_MODULE="config.settings_test" python manage.py test' # dt is short for django-test
+
+alias untargz='tar zxvf'
