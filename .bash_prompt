@@ -76,8 +76,18 @@ light_pink=$(tput setaf 13);
 light_cyan=$(tput setaf 14);
 light_grey=$(tput setaf 15);
 
+fs_mode() {
+	mode=$(mount | sed -n -e "s/^\/dev\/.* on \/ .*(\(r[w|o]\).*/\1/p")
+	if [ "$mode" = "rw" ]
+	then
+		echo "${bold}${dark_red}rw${reset}"
+	else
+		echo "ro"
+	fi
+}
+
 PS1="\[${bold}${dark_red}\]\u\[${reset}\]";
-PS1+=" at \[${bold}${dark_purple}\]\h\[${reset}\]";
+PS1+=" at \[${bold}${dark_purple}\]\h\[${reset}\] (\$(fs_mode))";
 PS1+=" in \[${bold}${dark_green}\]\w\[${reset}\]";
 PS1+="\$(prompt_git \" on \[${bold}${dark_blue}\]\" \"\[${bold}${dark_blue}\]\")";
 PS1+="\[${reset}\]\n$ ";

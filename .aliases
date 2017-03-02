@@ -23,3 +23,7 @@ alias pep8='pep8 --max-line-length=120'
 alias dt='DJANGO_SETTINGS_MODULE="config.settings_test" python manage.py test' # dt is short for django-test
 
 alias untargz='tar zxvf'
+
+# raspberry pi
+alias rw='sudo mount -o remount,rw /'
+alias ro='sudo mount -o remount,ro /'
