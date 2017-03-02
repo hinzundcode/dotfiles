@@ -1,4 +1,4 @@
-#!/usr/bin/php
+#!/usr/bin/env php
 <?php
 if (!isset($argv[1])) {
 	file_put_contents('php://stderr', 'Usage: docker-open <container> [port]'.PHP_EOL);
