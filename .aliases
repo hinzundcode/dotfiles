@@ -1,6 +1,6 @@
 #!/bin/sh
 
-alias ll='ls -la'
+alias ll='ls -lah'
 alias +x='chmod +x'
 alias bitch,='sudo'
 
